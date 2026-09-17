@@ -6,7 +6,7 @@ class AtencionMedica(Atencion):
     def __init__(self, codigo, tipoDeCobro, paciente, importe):
         super().__init__(codigo, tipoDeCobro)
         self.paciente = paciente
-        self.importe = importe
+        monto = importe
 
     @property
     def paciente(self):
@@ -25,4 +25,14 @@ class AtencionMedica(Atencion):
         self._importe = float(valor)
 
     def importeACobrar(self):
-        pass
+        monto = self.importe
+        if self.paciente.habitual == True:
+            monto = monto * 0.75
+        if self.tipoDeCobro == 1:
+            monto = monto * 0.90
+        if self.tipoDeCobro == 2:
+            monto = monto * 1.20
+
+        return monto
+
+    
