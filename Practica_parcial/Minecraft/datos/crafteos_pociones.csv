@@ -1,0 +1,13 @@
+idCrafteo,item,costoBase,cantidad,nickname,potencia,splash
+101,Pocion de curacion,12.0,3,Steve_99,2,no
+102,Pocion de fuerza,20.0,1,Alex_Miner,1,si
+103,Pocion de velocidad,10.0,5,CreeperSlayer,2,no
+104,Pocion de regeneracion,18.0,2,PixelQueen,3,si
+105,Pocion de invisibilidad,25.0,1,Herobrine_X,1,no
+106,Pocion de resistencia al fuego,15.0,4,NoobMaster,2,no
+107,Pocion de salto,8.0,6,EnderKnight,1,si
+108,Pocion de respiracion acuatica,14.0,2,LavaWalker,3,no
+109,Pocion de vision nocturna,11.0,3,DiamondDave,2,si
+110,Pocion de lentitud,9.0,2,ZombieHunter,1,no
+111,Pocion de veneno,16.0,1,RedstoneRita,3,si
+112,Pocion de curacion,12.0,2,GolemBuilder,2,no
