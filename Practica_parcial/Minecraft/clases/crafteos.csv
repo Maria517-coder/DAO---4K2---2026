@@ -1,0 +1,25 @@
+tipo,idCrafteo,item,costoBase,cantidad,nickname,danioPotencia,encantadaSplash
+1,1,Espada de diamante,50.0,1,Steve_99,7,si
+1,2,Espada de hierro,20.0,2,Alex_Miner,6,no
+1,3,Hacha de netherita,90.0,1,CreeperSlayer,10,si
+1,4,Arco,15.0,3,NoobMaster,5,no
+1,5,Tridente,120.0,1,Herobrine_X,9,si
+1,6,Espada de piedra,10.0,4,ZombieHunter,5,no
+1,7,Ballesta,40.0,2,PixelQueen,6,si
+1,8,Espada de oro,25.0,1,EnderKnight,4,no
+1,9,Hacha de diamante,60.0,2,LavaWalker,9,no
+1,10,Mazo,150.0,1,RedstoneRita,15,si
+1,11,Espada de netherita,110.0,1,DiamondDave,8,si
+1,12,Lanza,30.0,5,GolemBuilder,4,no
+2,101,Pocion de curacion,12.0,3,Steve_99,2,no
+2,102,Pocion de fuerza,20.0,1,Alex_Miner,1,si
+2,103,Pocion de velocidad,10.0,5,CreeperSlayer,2,no
+2,104,Pocion de regeneracion,18.0,2,PixelQueen,3,si
+2,105,Pocion de invisibilidad,25.0,1,Herobrine_X,1,no
+2,106,Pocion de resistencia al fuego,15.0,4,NoobMaster,2,no
+2,107,Pocion de salto,8.0,6,EnderKnight,1,si
+2,108,Pocion de respiracion acuatica,14.0,2,LavaWalker,3,no
+2,109,Pocion de vision nocturna,11.0,3,DiamondDave,2,si
+2,110,Pocion de lentitud,9.0,2,ZombieHunter,1,no
+2,111,Pocion de veneno,16.0,1,RedstoneRita,3,si
+2,112,Pocion de curacion,12.0,2,GolemBuilder,2,no
