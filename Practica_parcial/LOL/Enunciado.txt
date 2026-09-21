@@ -1,0 +1,69 @@
+# El pool de campeones
+
+## Consigna (tipo parcial)
+
+Un equipo profesional de League of Legends administra el conjunto de campeones que tiene disponibles para la fase de selección (*draft*) de sus partidas.
+
+De cada campeón se conoce un código numérico, el nombre, la cantidad de partidas que el equipo jugó con él y su poder base.
+
+El poder base es asignado por el analista del equipo en función del meta vigente, pero el poder definitivo es calculado a partir del poder base y de las características particulares del campeón.
+
+- En el caso de los **magos**, al poder base se le adicionan 30 puntos por cada habilidad de daño en área que posea y 100 puntos si es de prioridad de baneo.
+- Los **tanques** ven incrementado su poder base en 20 puntos si su dificultad es menor a 4 y se les incorpora el valor de su armadura.
+
+Se necesita un programa que lea del archivo `campeones.csv` la lista de todos los campeones y los almacene en algún objeto (no en la función principal) que ofrezca los siguientes métodos:
+
+1. **Suma de poderes**: informe el poder total del pool si todos los campeones fueran seleccionados.
+2. **Cantidad de magos élite**: informe la cantidad de magos con más de 150 partidas jugadas, más de 2 habilidades de daño en área y que sean de prioridad de baneo.
+3. **Tanque más débil**: informe el nombre del tanque cuyo poder definitivo sea el más bajo.
+
+La función principal debe ingresar los datos desde el archivo de texto y finalizar luego de imprimir el resultado de la ejecución de los tres métodos anteriores.
+
+### Estructura del archivo `campeones.csv`
+
+El archivo posee la siguiente estructura (sin línea de títulos, una línea por campeón):
+
+1. Tipo de campeón: 1 para magos y 2 para tanques
+2. Código: número sin repetición que identifica cada campeón
+3. Nombre del campeón
+4. Poder base: número de tipo float
+5. Partidas jugadas: número entero
+6. Si es un mago, la cantidad de habilidades de daño en área; si es un tanque, el valor de su armadura (número de tipo float)
+7. Si es un mago, un número 1 si es de prioridad de baneo y 0 si no; si es un tanque, un número entero de 1 a 10 indicando su dificultad
+
+### Contrato esperado (para los tests)
+
+Las clases deben llamarse y comportarse de la siguiente manera para que pasen las pruebas:
+
+- `Campeon(codigo, nombre, partidas, poder_base)` — clase base con atributos homónimos y método `poder()`.
+- `Mago(codigo, nombre, partidas, poder_base, habilidades_area, prioridad_baneo)` — `prioridad_baneo` booleano; redefine `poder()`.
+- `Tanque(codigo, nombre, partidas, poder_base, armadura, dificultad)` — redefine `poder()`.
+- `Equipo()` — contiene la colección de campeones y ofrece:
+  - `agregar(campeon)`
+  - `suma_poderes()`
+  - `cantidad_magos_elite()`
+  - `nombre_tanque_mas_debil()` — devuelve `None` si el equipo no tiene tanques
+
+## Archivos
+
+- `campeones.csv` — datos del parcial (ilustrativos: no reflejan estadísticas reales del juego).
+- `test_equipo.py` — casos de prueba (pytest) entregados junto a la consigna.
+
+## Cómo correr las pruebas
+
+Con pytest instalado, desde una carpeta que contenga los módulos de la solución junto a `test_equipo.py` (las clases se buscan por nombre en todos los `.py` de la carpeta, así que la solución puede estar en uno o en varios módulos):
+
+```
+python -m pytest
+python -m pytest -v
+```
+
+Salida esperada: 25 pruebas en verde.
+
+## Resultado esperado con `campeones.csv`
+
+Las pruebas no leen el archivo, así que estos son los valores que debe informar el programa con el `campeones.csv` entregado:
+
+- Suma de poderes: 10370.5
+- Cantidad de magos élite: 3
+- Tanque más débil: Rammus
