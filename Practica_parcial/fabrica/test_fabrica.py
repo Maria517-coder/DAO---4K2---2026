@@ -1,8 +1,8 @@
 import pytest
 
-from correctivo import Correctivo
+from mantenimientoCorrectivo import Correctivo
 from maquina import Maquina
-from preventivo import Preventivo
+from mantenimientoPreventivo import Preventivo
 
 
 @pytest.fixture()
